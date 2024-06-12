@@ -60,9 +60,39 @@ function setup()
     canvas = createCanvas(280,280);
     canvas.center();
     background("white");
+    canvas.mouseRealeased(classifyCanvas)
 }
 
+function preload()
+{
+    ml5.imageClassifier(classifier) 
+}
 
+function draw()
+{
+    strokeWeight(13);
+    strokeColor(purple);
+
+    if (mouseIsPressed){
+        line(pmouseX, pmouseY, mouseX, mouseY);
+    
+}
+
+function classifyCanvas()
+    {
+        classifier.classify(canvas, gotResult);
+    }
+
+function gotResult(error, results)
+    {
+        if (error){
+            console.error(error);
+        }
+    console.log(results)
+    documents.getElementById("label"
+
+            
+    }
 
 
 
