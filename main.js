@@ -53,6 +53,7 @@ function updateCanvas()
     canvas.background("white");
     console.log(sketch);
     document.getElementById("sketch").innerHTML = sketch;
+    background("white");
 }
 
 function setup()
